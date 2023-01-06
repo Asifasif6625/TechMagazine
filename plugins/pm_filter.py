@@ -71,7 +71,7 @@ async def next_page(bot, query):
         ]
      btn.insert(0, 
         [
-            InlineKeyboardButton(text=f' 🎬 {search} 🎬 ')
+            InlineKeyboardButton(f' 🎬 {search} 🎬 ')
         ]
     )
     else:
@@ -653,7 +653,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
      btn.insert(0, 
         [
-            InlineKeyboardButton(text=f' 🎬 {search} 🎬 ')
+            InlineKeyboardButton(f' 🎬 {search} 🎬 ')
         ]
     )
     else:
