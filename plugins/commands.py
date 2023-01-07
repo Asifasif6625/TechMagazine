@@ -53,8 +53,8 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+            reply_markup=reply_markup
+
         )
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
@@ -98,8 +98,8 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+            reply_markup=reply_markup
+
         )
         return
     data = message.command[1]
