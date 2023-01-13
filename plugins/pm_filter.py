@@ -406,8 +406,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TechMagazineYT')
+            InlineKeyboardButton('𝙨𝙚𝙖𝙧𝙘𝙝', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('𝙪𝙥𝙙𝙖𝙩𝙚 𝙘𝙝𝙖𝙣𝙣𝙚𝙡', url='https://t.me/malayalamvibe')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -708,7 +708,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"Request movie :- {search} \nQuality :- HDRIp \n\n📍ᑕᒪIᑕK ᗷᑌTTOᑎ ᗩᑎᗪ ᗪOᗯᑎᒪOᗩᗪ YOᑌᖇ ᗰOᐯIE "
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -719,9 +719,9 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            await message.reply_sticker('CAACAgUAAxkBAAFipWVjt_cPvsiiOFGj0gdgQ7OtIKMy9QACAgMAAuNRyVXr4gKzl3tyrx4E', cap, reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply_sticker('CAACAgUAAxkBAAFipWVjt_cPvsiiOFGj0gdgQ7OtIKMy9QACAgMAAuNRyVXr4gKzl3tyrx4E', cap, reply_markup=InlineKeyboardMarkup(btn))
+        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     if spoll:
         await msg.message.delete()
 
