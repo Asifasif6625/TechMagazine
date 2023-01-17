@@ -456,7 +456,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ΔDD MΣ ΨΩUR GRΩUP' url='https://settings'),
+            InlineKeyboardButton('ΔDD MΣ ΨΩUR GRΩUP' url='https://t.me/malayalamvibe'),
             InlineKeyboardButton('👩‍🦯 Back', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
